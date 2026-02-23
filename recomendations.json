@@ -1,0 +1,358 @@
+{
+  "Clear": [
+    { "text": "Wear sunglasses!", "icon": "wb_sunny", "color": "yellow" },
+    {
+      "text": "Great day for a walk.",
+      "icon": "directions_walk",
+      "color": "green"
+    },
+    {
+      "text": "Don't forget sunscreen!",
+      "icon": "light_mode",
+      "color": "amber"
+    },
+    {
+      "text": "Perfect for the beach",
+      "icon": "beach_access",
+      "color": "blue"
+    },
+    {
+      "text": "Open the windows for fresh air.",
+      "icon": "window",
+      "color": "teal"
+    },
+    {
+      "text": "Try an outdoor sport!",
+      "icon": "sports_soccer",
+      "color": "lime"
+    },
+    { "text": "Enjoy a picnic!", "icon": "lunch_dining", "color": "orange" },
+    {
+      "text": "Take photos of the sky.",
+      "icon": "photo_camera",
+      "color": "indigo"
+    },
+
+    {
+      "text": "Stretch outside for a quick sun salute.",
+      "icon": "self_improvement",
+      "color": "yellow"
+    },
+    {
+      "text": "Take a short photo walk — clouds are optional.",
+      "icon": "photo_camera",
+      "color": "indigo"
+    },
+    {
+      "text": "Step outside for fresh air and a tiny adventure.",
+      "icon": "directions_walk",
+      "color": "lime"
+    },
+    {
+      "text": "Plant or water a small pot.",
+      "icon": "grass",
+      "color": "green"
+    },
+    {
+      "text": "Do a 10-minute sunlight stretch break.",
+      "icon": "accessibility_new",
+      "color": "amber"
+    }
+  ],
+
+  "Rain": [
+    { "text": "Take an umbrella.", "icon": "umbrella", "color": "blue" },
+    {
+      "text": "Wear waterproof shoes.",
+      "icon": "water_drop",
+      "color": "indigo"
+    },
+    { "text": "Drive carefully!", "icon": "directions_car", "color": "orange" },
+    { "text": "Check for rain delays.", "icon": "schedule", "color": "amber" },
+    { "text": "Keep electronics dry.", "icon": "devices", "color": "blue" },
+    { "text": "Read a book indoors.", "icon": "menu_book", "color": "purple" },
+    {
+      "text": "Listen to the rain sounds.",
+      "icon": "music_note",
+      "color": "teal"
+    },
+    { "text": "Wear a raincoat.", "icon": "checkroom", "color": "yellow" },
+    { "text": "Dance in the rain.", "icon": "celebration", "color": "purple" },
+    { "text": "Jump in puddles.", "icon": "waves", "color": "blue" },
+    { "text": "Take rainy day photos.", "icon": "camera_alt", "color": "teal" },
+    {
+      "text": "Watch the raindrops fall.",
+      "icon": "visibility",
+      "color": "gray"
+    },
+    { "text": "Write in your journal.", "icon": "edit", "color": "amber" },
+    { "text": "Cook a comfort meal.", "icon": "restaurant", "color": "red" },
+    { "text": "Call a loved one.", "icon": "call", "color": "green" },
+    {
+      "text": "Do indoor exercises.",
+      "icon": "fitness_center",
+      "color": "lime"
+    },
+
+    {
+      "text": "Make a comfort playlist and relax.",
+      "icon": "music_note",
+      "color": "purple"
+    },
+    {
+      "text": "Play a simple tabletop or card game.",
+      "icon": "casino",
+      "color": "orange"
+    },
+    {
+      "text": "Listen to an audiobook or podcast episode.",
+      "icon": "podcasts",
+      "color": "indigo"
+    },
+    {
+      "text": "Do a small digital tidy-up.",
+      "icon": "delete_sweep",
+      "color": "indigo"
+    },
+    {
+      "text": "Share a funny meme with a friend.",
+      "icon": "emoji_emotions",
+      "color": "teal"
+    }
+  ],
+
+  "Snow": [
+    { "text": "Wear warm clothes.", "icon": "ac_unit", "color": "cyan" },
+    {
+      "text": "Be careful on the roads.",
+      "icon": "warning",
+      "color": "orange"
+    },
+    {
+      "text": "Good day for hot chocolate!",
+      "icon": "local_cafe",
+      "color": "amber"
+    },
+    { "text": "Build a snowman!", "icon": "toys", "color": "blue" },
+    { "text": "Go sledding!", "icon": "downhill_skiing", "color": "indigo" },
+    { "text": "Check heating systems.", "icon": "heat_pump", "color": "red" },
+    { "text": "Shovel your driveway.", "icon": "shovel", "color": "gray" },
+    { "text": "Watch for icy patches.", "icon": "warning", "color": "yellow" },
+
+    {
+      "text": "Watch flakes from a warm window with a hot drink.",
+      "icon": "local_cafe",
+      "color": "cyan"
+    },
+    {
+      "text": "Take gentle photos of winter details.",
+      "icon": "photo_camera",
+      "color": "indigo"
+    },
+    {
+      "text": "Do a short indoor craft or puzzle.",
+      "icon": "puzzle",
+      "color": "orange"
+    },
+    {
+      "text": "Organize a snug movie marathon with short breaks.",
+      "icon": "theaters",
+      "color": "indigo"
+    },
+    {
+      "text": "Write a short, silly winter caption for photos.",
+      "icon": "edit",
+      "color": "amber"
+    }
+  ],
+
+  "Thunderstorm": [
+    { "text": "Stay indoors if possible.", "icon": "home", "color": "purple" },
+    { "text": "Unplug electronics.", "icon": "power_off", "color": "red" },
+    { "text": "Avoid open fields!", "icon": "landscape", "color": "lime" },
+    { "text": "Stay away from trees.", "icon": "park", "color": "green" },
+    { "text": "Wait to shower.", "icon": "shower", "color": "blue" },
+    { "text": "Close windows and doors.", "icon": "window", "color": "blue" },
+    {
+      "text": "Monitor weather alerts.",
+      "icon": "notifications",
+      "color": "amber"
+    },
+    {
+      "text": "Avoid strenuous activity.",
+      "icon": "do_not_disturb_on",
+      "color": "red"
+    },
+    {
+      "text": "Keep a flashlight nearby.",
+      "icon": "flashlight_on",
+      "color": "yellow"
+    },
+
+    {
+      "text": "Listen to thunder from a safe spot and relax.",
+      "icon": "music_note",
+      "color": "teal"
+    },
+    {
+      "text": "Play a board game or do a short puzzle.",
+      "icon": "extension",
+      "color": "orange"
+    },
+    {
+      "text": "Text a friend a short, silly weather update.",
+      "icon": "sms",
+      "color": "green"
+    },
+    {
+      "text": "Check entertainment options — podcast, audiobook, playlist.",
+      "icon": "podcasts",
+      "color": "purple"
+    }
+  ],
+
+  "Fog": [
+    {
+      "text": "Drive with caution.",
+      "icon": "visibility_off",
+      "color": "gray"
+    },
+    { "text": "Use fog lights.", "icon": "highlight", "color": "yellow" },
+    { "text": "Reduce speed.", "icon": "speed", "color": "orange" },
+    { "text": "Keep windows clear.", "icon": "clear_all", "color": "blue" },
+    { "text": "Listen for traffic.", "icon": "hearing", "color": "teal" },
+    { "text": "Avoid sudden stops.", "icon": "report", "color": "red" },
+    { "text": "Use low beams.", "icon": "light", "color": "indigo" },
+    {
+      "text": "Allow extra travel time.",
+      "icon": "schedule",
+      "color": "amber"
+    },
+
+    {
+      "text": "Take a slow, mindful walk—let sound lead you.",
+      "icon": "directions_walk",
+      "color": "gray"
+    },
+    {
+      "text": "Savor a warm drink while watching muted silhouettes.",
+      "icon": "local_cafe",
+      "color": "amber"
+    },
+    {
+      "text": "Capture moody photos or write a short scene.",
+      "icon": "edit",
+      "color": "indigo"
+    }
+  ],
+
+  "Cold": [
+    { "text": "Dress in layers.", "icon": "checkroom", "color": "indigo" },
+    { "text": "Keep warm!", "icon": "ac_unit", "color": "blue" },
+    { "text": "Drink hot beverages.", "icon": "local_cafe", "color": "amber" },
+    { "text": "Wear a hat and gloves.", "icon": "checkroom", "color": "red" },
+    { "text": "Limit time outdoors.", "icon": "timer", "color": "gray" },
+    {
+      "text": "Check heating systems.",
+      "icon": "heat_pump",
+      "color": "orange"
+    },
+    { "text": "Moisturize your skin.", "icon": "spa", "color": "teal" },
+    { "text": "Keep pets indoors.", "icon": "pets", "color": "yellow" },
+
+    {
+      "text": "Prepare a warm drink and read a short poem.",
+      "icon": "local_cafe",
+      "color": "amber"
+    },
+    {
+      "text": "Do a gentle mobility routine near a heater.",
+      "icon": "fitness_center",
+      "color": "red"
+    },
+    {
+      "text": "Catch up on a podcast or an audiobook.",
+      "icon": "podcasts",
+      "color": "indigo"
+    }
+  ],
+
+  "Hot": [
+    { "text": "Stay hydrated!", "icon": "local_drink", "color": "blue" },
+    { "text": "Avoid direct sun.", "icon": "wb_sunny", "color": "amber" },
+    { "text": "Wear light clothing.", "icon": "checkroom", "color": "yellow" },
+    { "text": "Stay in the shade.", "icon": "park", "color": "green" },
+    { "text": "Use sunscreen.", "icon": "light_mode", "color": "orange" },
+    { "text": "Take cool showers.", "icon": "shower", "color": "blue" },
+    { "text": "Wear a hat.", "icon": "checkroom", "color": "indigo" },
+
+    {
+      "text": "Enjoy a cold fruit snack or iced tea.",
+      "icon": "local_drink",
+      "color": "teal"
+    },
+    {
+      "text": "Find a shady or air-conditioned spot and relax for 10 minutes.",
+      "icon": "park",
+      "color": "green"
+    },
+    {
+      "text": "Do light, low-effort stretches in the cool hours.",
+      "icon": "self_improvement",
+      "color": "lime"
+    }
+  ],
+
+  "Default": [
+    { "text": "Make today memorable!", "icon": "star", "color": "emerald" },
+    { "text": "Smile to someone today!", "icon": "mood", "color": "yellow" },
+    { "text": "Call a friend.", "icon": "call", "color": "blue" },
+    { "text": "Read a good book.", "icon": "menu_book", "color": "indigo" },
+    { "text": "Try something new!", "icon": "explore", "color": "orange" },
+    {
+      "text": "Enjoy your favorite music.",
+      "icon": "music_note",
+      "color": "teal"
+    },
+    {
+      "text": "Take a deep breath.",
+      "icon": "self_improvement",
+      "color": "green"
+    },
+    { "text": "Be kind to yourself.", "icon": "favorite", "color": "red" },
+
+    {
+      "text": "Keep flexible plans and a good sense of humor.",
+      "icon": "help_outline",
+      "color": "gray"
+    },
+    {
+      "text": "Try a simple indoor activity.",
+      "icon": "lightbulb",
+      "color": "amber"
+    },
+    {
+      "text": "Take a moment to breathe and plan one small thing.",
+      "icon": "self_improvement",
+      "color": "teal"
+    }
+  ],
+
+  "Unknown": [
+    {
+      "text": "Keep flexible plans and a good sense of humor.",
+      "icon": "help_outline",
+      "color": "gray"
+    },
+    {
+      "text": "Choose a simple indoor activity that always works.",
+      "icon": "lightbulb",
+      "color": "amber"
+    },
+    {
+      "text": "Take a moment to breathe and plan one small thing.",
+      "icon": "self_improvement",
+      "color": "teal"
+    }
+  ]
+}
