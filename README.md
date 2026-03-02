@@ -1,11 +1,11 @@
 # WeatherDash
 
-![Licença GitHub](https://img.shields.io/github/license/emellybmuniz/weather-app)
-![Contagem de linguagens](https://img.shields.io/github/languages/count/emellybmuniz/weather-app)
-![Último commit](https://img.shields.io/github/last-commit/emellybmuniz/weather-app)
-![Tamanho do repositório](https://img.shields.io/github/repo-size/emellybmuniz/weather-app)
+![Licença GitHub](https://img.shields.io/github/license/emellybmuniz/WeatherDash)
+![Contagem de linguagens](https://img.shields.io/github/languages/count/emellybmuniz/WeatherDash)
+![Último commit](https://img.shields.io/github/last-commit/emellybmuniz/WeatherDash)
+![Tamanho do repositório](https://img.shields.io/github/repo-size/emellybmuniz/WeatherDash)
 ![Status do Projeto](https://img.shields.io/badge/Status%20-%20Concluído%20-%20%234BC21E)
-![GitHub Stars](https://img.shields.io/github/stars/emellybmuniz/weather-app?style=social)
+![GitHub Stars](https://img.shields.io/github/stars/emellybmuniz/WeatherDash?style=social)
 
 Uma aplicação de clima moderna e responsiva construída com HTML, CSS, Tailwind e JavaScript. Oferece previsões em tempo real, localização interativa no mapa e recomendações personalizadas baseadas nas condições climáticas.
 
@@ -166,10 +166,6 @@ python -m http.server 3000
 # 4. Abra no navegador
 # http://localhost:3000
 ```
-
-**Alternativa Online**: [Visite a aplicação em produção](https://weatherdash.vercel.app)
-
----
 
 ## 💡 Como Usar
 
