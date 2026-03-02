@@ -65,15 +65,13 @@ function handleNavClick(e) {
 
       if (section && scrollContainer) {
         if (sectionId === "dashboard") {
-          // Scroll main container to top
           scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
         } else {
-          // Calculate relative position of the section within the container
           const top =
             section.getBoundingClientRect().top -
             scrollContainer.getBoundingClientRect().top +
             scrollContainer.scrollTop -
-            60; 
+            60;
           scrollContainer.scrollTo({ top: top, behavior: "smooth" });
         }
       }
@@ -99,6 +97,7 @@ document.addEventListener("scroll", onScrollHighlightNav, true);
 document.addEventListener("DOMContentLoaded", () => {
   setActiveNav("dashboard");
 });
+
 const apiKey = "9ea1364837e6440ca11154920250909";
 const apiUrl = "http://api.weatherapi.com/v1/current.json";
 const forecastUrl = "http://api.weatherapi.com/v1/forecast.json";
@@ -149,14 +148,10 @@ let recommendationsData = null;
 let recommendationsLoaded = false;
 let recommendationsLoadingPromise = null;
 
-/**
- * Loads recommendation data from JSON with caching.
- * @returns {Promise<Object>} The recommendations object.
- */
 function loadRecommendationsData() {
   if (recommendationsLoaded) return Promise.resolve(recommendationsData);
   if (recommendationsLoadingPromise) return recommendationsLoadingPromise;
-  recommendationsLoadingPromise = fetch("recomendations.json")
+  recommendationsLoadingPromise = fetch("./recomendations.json")
     .then((res) => {
       if (!res.ok) throw new Error("Erro ao carregar recomendações");
       return res.json();
@@ -179,7 +174,6 @@ function loadSavedLocations() {
   return saved ? JSON.parse(saved) : [];
 }
 
-// Material Symbols
 const weatherIconMap = {
   Sunny: "light_mode",
   "Partly cloudy": "partly_cloudy_day",
@@ -223,11 +217,6 @@ const weatherIconMap = {
   Night: "nights_stay",
 };
 
-/**
- * Maps API weather condition text to a Material Symbol icon name.
- * @param {string} condition - The weather condition text (e.g., "Partly cloudy").
- * @returns {string} The icon name.
- */
 function getWeatherIcon(condition) {
   for (const [key, value] of Object.entries(weatherIconMap)) {
     if (condition.includes(key) || key.includes(condition.split(" ")[0])) {
@@ -261,7 +250,6 @@ function updateMapSection(location, latitude, longitude) {
 
   const mapIframe = document.getElementById("windyMap");
   if (mapIframe) {
-    // Windy embed: https://embed.windy.com/embed2.html?lat=...&lon=...&zoom=8&level=surface&overlay=radar
     const mapUrl = `https://embed.windy.com/embed2.html?lat=${latitude}&lon=${longitude}&zoom=8&level=surface&overlay=radar`;
     mapIframe.src = mapUrl;
   }
@@ -392,11 +380,6 @@ function fetchForecast(location) {
     });
 }
 
-/**
- * Maps Open-Meteo WMO weather codes to human-readable text.
- * @param {number} code - The WMO weather code.
- * @returns {string} The condition description.
- */
 function getOpenMeteoCondition(code) {
   const map = {
     0: "Clear sky",
@@ -465,7 +448,6 @@ function updateForecast(forecastDays) {
       label = "Today";
     }
 
-
     const highC = day.day.maxtemp_c;
     const lowC = day.day.mintemp_c;
     const highF = (highC * 9) / 5 + 32;
@@ -474,8 +456,8 @@ function updateForecast(forecastDays) {
     const low = isImperial() ? lowF : lowC;
     const condition = day.day.condition.text;
     const iconName = getOpenMeteoIcon(day.day.condition.code);
+
     function getOpenMeteoIcon(code) {
-      // See https://open-meteo.com/en/docs#api_form for all codes
       const map = {
         0: "light_mode",
         1: "wb_sunny",
@@ -545,16 +527,6 @@ function updateForecast(forecastDays) {
   });
 }
 
-/**
- * Updates the main weather panel when a forecast day is clicked.
- *
- * @param {Object} day - The forecast day object containing date and weather data.
- * @param {string} label - The display label for the day (e.g., "Monday", "Today").
- * @param {string} iconName - The Material Symbol icon name.
- * @param {number} high - High temperature.
- * @param {number} low - Low temperature.
- * @param {string} condition - Weather condition text.
- */
 function updateWeatherPanelFromForecast(
   day,
   label,
@@ -628,9 +600,10 @@ function renderSavedLocations() {
 
   savedLocations.forEach((location) => {
     let displayTemp = location.temperature;
-    // If specific C and F data exists, use current preference
     if (location.temp_c !== undefined && location.temp_f !== undefined) {
-      displayTemp = isImperial() ? Math.round(location.temp_f) : Math.round(location.temp_c);
+      displayTemp = isImperial()
+        ? Math.round(location.temp_f)
+        : Math.round(location.temp_c);
     }
 
     const button = document.createElement("button");
@@ -779,10 +752,6 @@ saveLocationBtn.addEventListener("click", () => {
   saveCurrentLocation();
 });
 
-view14DaysBtn.addEventListener("click", () => {
-  window.location.href = "detailedWeek.html";
-});
-
 shareBtn.addEventListener("click", async () => {
   const weatherPanel = document.getElementById("weatherPanel");
 
@@ -845,11 +814,6 @@ shareBtn.addEventListener("click", async () => {
   }
 });
 
-/**
- * Updates the recommendations section based on weather condition and temperature.
- * @param {string} condition - The current weather condition text.
- * @param {number} temp - The current temperature (used for Hot/Cold logic).
- */
 function updateRecommendations(condition, temp) {
   const container = document.getElementById("recommendationsContainer");
   if (!container) return;
@@ -906,20 +870,6 @@ function updateRecommendations(condition, temp) {
             </div>
           </div>
         `;
-      container.appendChild(div);
-    });
-
-    items.slice(0, 3).forEach((item) => {
-      const div = document.createElement("div");
-      div.className = `p-4 bg-${color}-50 dark:bg-${color}-900/20 rounded-lg border-l-4 border-${color}-400 dark:border-${color}-600`;
-      div.innerHTML = `
-        <div class="flex items-start gap-3">
-          <span class="material-symbols-outlined text-${color}-600 dark:text-${color}-400">${item.icon}</span>
-          <div>
-            <p class="font-bold text-sm text-slate-900 dark:text-slate-100">${item.text}</p>
-          </div>
-        </div>
-      `;
       container.appendChild(div);
     });
   });

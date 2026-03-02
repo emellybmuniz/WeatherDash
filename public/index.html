@@ -13,17 +13,20 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../src/style.css" />
     <script>
       const theme = localStorage.getItem("weatherDashTheme") || "light";
       if (theme === "dark") {
         document.documentElement.classList.add("dark");
       }
-      
+
       const accent = localStorage.getItem("weatherDashAccent") || "#2b8cee";
       document.documentElement.style.setProperty("--color-primary", accent);
       document.documentElement.style.setProperty("--accent-color", accent);
-      document.documentElement.style.setProperty("--accent-light", `color-mix(in srgb, ${accent}, transparent 85%)`);
+      document.documentElement.style.setProperty(
+        "--accent-light",
+        `color-mix(in srgb, ${accent}, transparent 85%)`,
+      );
 
       tailwind.config = {
         darkMode: "class",
@@ -37,11 +40,7 @@
                 text: "var(--text-primary)",
                 muted: "var(--text-secondary)",
                 border: "var(--border-color)",
-                accent: {
-                  DEFAULT: "var(--accent-color)",
-                  light: "var(--accent-light)",
-                  hover: "var(--accent-hover)",
-                },
+                accent: "var(--accent-color)",
               },
             },
           },
@@ -62,7 +61,10 @@
           >menu</span
         >
       </button>
-      <div id="sidebarBackdrop" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden backdrop-blur-sm transition-opacity"></div>
+      <div
+        id="sidebarBackdrop"
+        class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden backdrop-blur-sm transition-opacity"
+      ></div>
       <aside
         id="sidebar"
         class="fixed inset-y-0 left-0 z-40 w-72 bg-app-surface border-r border-app-border flex flex-col shrink-0 shadow-sm transition-transform duration-300 -translate-x-full lg:translate-x-0 lg:static lg:z-auto"
@@ -72,9 +74,8 @@
           <div class="mb-8">
             <div class="flex items-center gap-2 mb-2">
               <span
-                class="material-symbols-outlined text-3xl"
-                class="text-app-accent"
-                style="font-size: 2rem; color: var(--accent-color)"
+                class="material-symbols-outlined text-3xl text-app-accent"
+                style="font-variation-settings: &quot;FILL&quot; 1"
                 >cloud_sync</span
               >
               <h1 class="text-2xl font-bold tracking-tight">WeatherDash</h1>
@@ -95,10 +96,10 @@
                 >search</span
               >
               <input
-                class="w-full pl-10 pr-4 py-2 bg-app-tertiary border border-app-border rounded-lg focus:ring-2 focus:ring-app-accent focus:border-transparent text-sm outline-none text-app-text placeholder-app-muted transition-colors"
-                id="locationInput"
-                placeholder="Search for a city..."
                 type="text"
+                id="locationInput"
+                class="w-full pl-10 pr-4 py-2 rounded-lg bg-app-tertiary border border-app-border text-app-text placeholder-app-muted focus:outline-none focus:ring-2 focus:ring-app-accent/50"
+                placeholder="Search location..."
                 autocomplete="off"
               />
             </label>
@@ -114,10 +115,7 @@
             <a
               class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-medium transition-colors nav-link"
               href="#dashboard"
-              style="
-                background-color: var(--bg-tertiary);
-                color: var(--accent-color);
-              "
+              style="background-color: transparent; color: var(--accent-color)"
             >
               <span class="material-symbols-outlined">dashboard</span>
               Dashboard
@@ -178,7 +176,10 @@
           class="flex flex-col md:flex-row justify-between md:items-end gap-4 pt-12 lg:pt-0 transition-all duration-300"
         >
           <div>
-            <h2 class="text-2xl md:text-4xl font-bold text-app-text" id="mainLocation">
+            <h2
+              class="text-2xl md:text-4xl font-bold text-app-text"
+              id="mainLocation"
+            >
               Rio de Janeiro, Brazil
             </h2>
             <p class="text-app-muted font-medium" id="currentDate">
@@ -226,124 +227,77 @@
             ></div>
             <div class="flex flex-col items-center md:items-start z-10">
               <span
-                class="px-3 py-1 text-xs font-bold rounded-full mb-4"
-                style="
-                  background-color: var(--accent-light);
-                  color: var(--accent-color);
-                "
+                class="text-xs font-semibold text-app-muted uppercase tracking-widest mb-3"
                 >CURRENT WEATHER</span
               >
               <div class="flex items-center gap-6 mb-2">
                 <span
-                  class="material-symbols-outlined text-7xl text-yellow-500"
-                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  class="material-symbols-outlined text-8xl text-yellow-500"
                   id="weatherIcon"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
                   >light_mode</span
                 >
                 <div>
-                  <h3 class="text-6xl font-bold text-app-text" id="temperature">
-                    31°C
-                  </h3>
-                  <p
-                    class="text-xl text-app-muted font-medium"
-                    id="description"
-                  >
-                    Ensolarado
+                  <p class="text-7xl font-bold text-app-text" id="temperature">
+                    28°C
+                  </p>
+                  <p class="text-xl text-app-muted" id="description">
+                    Partly cloudy
                   </p>
                 </div>
               </div>
               <p class="text-app-muted text-sm mt-4" id="feelsLike">
-                Feels like 34°C
+                Feels like 25°C
               </p>
             </div>
             <div class="grid grid-cols-2 gap-x-12 gap-y-6 z-10">
               <div class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background-color: var(--accent-light)"
-                >
+                <div class="flex flex-col items-center">
                   <span
-                    class="material-symbols-outlined"
-                    style="color: var(--accent-color)"
-                    >humidity_percentage</span
+                    class="material-symbols-outlined text-app-muted text-2xl"
+                    >water_drop</span
                   >
+                  <p class="text-xs text-app-muted mt-1">Humidity</p>
                 </div>
-                <div>
-                  <p
-                    class="text-xs text-app-muted uppercase font-bold tracking-wider"
-                  >
-                    Humidity
-                  </p>
-                  <p class="text-lg font-bold text-app-text" id="humidity">
-                    65%
-                  </p>
-                </div>
+                <p class="text-lg font-semibold text-app-text" id="humidity">
+                  65%
+                </p>
               </div>
               <div class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background-color: var(--accent-light)"
-                >
+                <div class="flex flex-col items-center">
                   <span
-                    class="material-symbols-outlined"
-                    style="color: var(--accent-color)"
+                    class="material-symbols-outlined text-app-muted text-2xl"
                     >air</span
                   >
+                  <p class="text-xs text-app-muted mt-1">Wind</p>
                 </div>
-                <div>
-                  <p
-                    class="text-xs text-app-muted uppercase font-bold tracking-wider"
-                  >
-                    Wind
-                  </p>
-                  <p class="text-lg font-bold text-app-text" id="wind">
-                    12 km/h
-                  </p>
-                </div>
+                <p class="text-lg font-semibold text-app-text" id="wind">
+                  12 km/h
+                </p>
               </div>
               <div class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background-color: var(--accent-light)"
-                >
+                <div class="flex flex-col items-center">
                   <span
-                    class="material-symbols-outlined"
-                    style="color: var(--accent-color)"
-                    >sunny</span
+                    class="material-symbols-outlined text-app-muted text-2xl"
+                    >light_mode</span
                   >
+                  <p class="text-xs text-app-muted mt-1">UV</p>
                 </div>
-                <div>
-                  <p
-                    class="text-xs text-app-muted uppercase font-bold tracking-wider"
-                  >
-                    UV Index
-                  </p>
-                  <p class="text-lg font-bold text-app-text" id="uv">
-                    8 (Alto)
-                  </p>
-                </div>
+                <p class="text-lg font-semibold text-app-text" id="uv">
+                  3 (Moderate)
+                </p>
               </div>
               <div class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background-color: var(--accent-light)"
-                >
+                <div class="flex flex-col items-center">
                   <span
-                    class="material-symbols-outlined"
-                    style="color: var(--accent-color)"
-                    >compress</span
+                    class="material-symbols-outlined text-app-muted text-2xl"
+                    >speed</span
                   >
+                  <p class="text-xs text-app-muted mt-1">Pressure</p>
                 </div>
-                <div>
-                  <p
-                    class="text-xs text-app-muted uppercase font-bold tracking-wider"
-                  >
-                    Pressure
-                  </p>
-                  <p class="text-lg font-bold text-app-text" id="pressure">
-                    1014 hPa
-                  </p>
-                </div>
+                <p class="text-lg font-semibold text-app-text" id="pressure">
+                  1013 hPa
+                </p>
               </div>
             </div>
           </div>
@@ -356,8 +310,8 @@
               class="font-bold text-lg mb-4 flex items-center gap-2 text-app-text"
             >
               <span
-                class="material-symbols-outlined"
-                style="color: var(--accent-color)"
+                class="material-symbols-outlined text-app-accent"
+                style="font-variation-settings: &quot;FILL&quot; 1"
                 >self_improvement</span
               >
               Recommendations
@@ -377,9 +331,7 @@
         </section>
 
         <section id="map" class="space-y-4">
-          <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
-            Weather Map
-          </h3>
+          <h3 class="text-2xl font-bold text-app-text">Weather Map</h3>
           <div
             class="bg-app-surface rounded-xl shadow-sm border border-app-border overflow-hidden transition-colors"
           >
@@ -399,12 +351,10 @@
               class="bg-app-surface p-4 rounded-lg shadow-sm border border-app-border transition-colors"
             >
               <div class="flex items-center gap-3 mb-2">
-                <span
-                  class="material-symbols-outlined"
-                  style="color: var(--accent-color)"
+                <span class="material-symbols-outlined text-app-muted"
                   >location_on</span
                 >
-                <h4 class="font-bold text-app-text">Place</h4>
+                <p class="text-sm font-semibold text-app-text">Location</p>
               </div>
               <p class="text-sm text-app-muted" id="mapLocationName">
                 Rio de Janeiro, Brazil
@@ -414,12 +364,10 @@
               class="bg-app-surface p-4 rounded-lg shadow-sm border border-app-border transition-colors"
             >
               <div class="flex items-center gap-3 mb-2">
-                <span
-                  class="material-symbols-outlined"
-                  style="color: var(--accent-color)"
-                  >public</span
+                <span class="material-symbols-outlined text-app-muted"
+                  >near_me</span
                 >
-                <h4 class="font-bold text-app-text">Coordinates</h4>
+                <p class="text-sm font-semibold text-app-text">Coordinates</p>
               </div>
               <p class="text-sm text-app-muted" id="mapCoordinates">
                 -22.84°, -43.28°
@@ -429,16 +377,12 @@
               class="bg-app-surface p-4 rounded-lg shadow-sm border border-app-border transition-colors"
             >
               <div class="flex items-center gap-3 mb-2">
-                <span
-                  class="material-symbols-outlined"
-                  style="color: var(--accent-color)"
-                  >info</span
+                <span class="material-symbols-outlined text-app-muted"
+                  >altitude</span
                 >
-                <h4 class="font-bold text-app-text">Altitude</h4>
+                <p class="text-sm font-semibold text-app-text">Altitude</p>
               </div>
-              <p class="text-sm text-app-muted" id="mapAltitude">
-                2 m above sea level
-              </p>
+              <p class="text-sm text-app-muted" id="mapAltitude">~10 meters</p>
             </div>
           </div>
         </section>
@@ -446,6 +390,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../src/script.js"></script>
   </body>
 </html>

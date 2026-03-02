@@ -1,0 +1,23 @@
+{
+  "name": "weatherdash",
+  "version": "1.0.0",
+  "description": "A modern weather application with location search, forecasts, and recommendations",
+  "author": "Emelly Muniz",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "start": "python -m http.server 8080"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "climate",
+    "api",
+    "responsive"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

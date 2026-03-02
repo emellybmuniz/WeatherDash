@@ -10,10 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
     <script>
       const theme = localStorage.getItem("weatherDashTheme") || "light";
       if (theme === "dark") {
@@ -80,7 +76,7 @@
           <a
             href="index.html"
             class="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100"
-            title="Voltar"
+            title="Back"
           >
             <span class="material-symbols-outlined">arrow_back</span>
           </a>
@@ -111,12 +107,6 @@
                     Drag to reorder your favorite cities.
                   </p>
                 </div>
-                <button
-                  class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all"
-                >
-                  <span class="material-symbols-outlined text-sm">add</span>
-                  Add City
-                </button>
               </div>
               <div
                 class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800"
@@ -235,7 +225,6 @@
     </div>
 
     <script>
-      // --- Unidade de temperatura ---
       function getUnitPreference() {
         const stored = localStorage.getItem("weatherDashUnit");
         if (stored) return stored;
@@ -305,7 +294,6 @@
         }
       }
       document.addEventListener("DOMContentLoaded", () => {
-        // Unit Temperatures
         updateUnitButtons(getUnitPreference());
         document.getElementById("metricBtn").addEventListener("click", () => {
           setUnitPreference("metric");
@@ -340,7 +328,6 @@
           .map((location, index) => {
             const isImperial = getUnitPreference() === "imperial";
             let displayTemp = location.temperature;
-            // If specific C and F data exists, use current preference
             if (
               location.temp_c !== undefined &&
               location.temp_f !== undefined
@@ -526,7 +513,6 @@
         });
       }
 
-      // --- Accent Color Logic ---
       function initAccentColor() {
         const buttons = document.querySelectorAll(".accent-btn");
         const currentAccent =
