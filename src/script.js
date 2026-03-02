@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const apiKey = "9ea1364837e6440ca11154920250909";
-const apiUrl = "http://api.weatherapi.com/v1/current.json";
-const forecastUrl = "http://api.weatherapi.com/v1/forecast.json";
+const apiUrl = "https://api.weatherapi.com/v1/current.json";
+const forecastUrl = "https://api.weatherapi.com/v1/forecast.json";
 
 const locationInput = document.getElementById("locationInput");
 const mainLocation = document.getElementById("mainLocation");
@@ -666,12 +666,12 @@ locationInput.addEventListener("input", function (event) {
 });
 
 function fetchLocationSuggestions(query) {
-  const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no`;
+  const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${query}&aqi=no`;
 
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const searchUrl = `http://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${query}`;
+      const searchUrl = `https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${query}`;
       return fetch(searchUrl).then((res) => res.json());
     })
     .then((data) => {

@@ -1,5 +1,5 @@
 :root {
-  /* Light Mode - Paleta Clean e Legível */
+  /* Light Mode */
   --bg-primary: #f8fafc; /* Slate 50 */
   --bg-secondary: #ffffff; /* White */
   --bg-tertiary: #f1f5f9; /* Slate 100 */
@@ -12,7 +12,7 @@
 }
 
 html.dark {
-  /* Dark Mode - Paleta Profunda */
+
   --bg-primary: #0f172a; /* Slate 900 */
   --bg-secondary: #1e293b; /* Slate 800 */
   --bg-tertiary: #334155; /* Slate 700 */
@@ -66,7 +66,7 @@ body {
   background: var(--text-secondary);
 }
 
-/* Material Symbols - ícones com Fill */
+
 .material-symbols-outlined {
   font-variation-settings:
     "FILL" 0,
